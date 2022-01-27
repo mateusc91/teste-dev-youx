@@ -1,5 +1,6 @@
 package com.example.testeyoux.controller;
 
+import com.example.testeyoux.helper.EFuncoes;
 import com.example.testeyoux.model.JwtResponse;
 import com.example.testeyoux.model.LoginRequest;
 import com.example.testeyoux.repositorio.UsuarioRepositorio;
@@ -48,7 +49,7 @@ public class AuthController {
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 
-        if(!userDetails.getFuncao().equals(MEDICO)){
+        if(!userDetails.getFuncao().equals(EFuncoes.MEDICO.getDescricao())){
             log.error(("Usuario nao é um medico, somente medicos podem logar no gerenciamento"));
             return ResponseEntity.badRequest()
                     .body("Usuario nao é um medico");
