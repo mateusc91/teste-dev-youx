@@ -3,7 +3,6 @@ package com.example.testeyoux.helper;
 import com.example.testeyoux.repositorio.PacienteRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 
