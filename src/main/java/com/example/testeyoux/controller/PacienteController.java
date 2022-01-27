@@ -5,11 +5,13 @@ import com.example.testeyoux.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
 @RestController
 @RequestMapping("/api/v1/paciente")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PacienteController {
 
     private final PacienteService pacienteService;
@@ -25,8 +27,10 @@ public class PacienteController {
     }
 
     @PostMapping("/cadastrar")
-    public void cadastrarNovoPaciente(@RequestBody Paciente paciente){
+    public void cadastrarNovoPaciente(@Valid @RequestBody Paciente paciente){
         pacienteService.adicionarPaciente(paciente);
     }
+
+
 
 }

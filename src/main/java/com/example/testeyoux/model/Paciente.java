@@ -1,9 +1,9 @@
 package com.example.testeyoux.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
 @Data
@@ -23,11 +23,11 @@ public class Paciente {
     private Long id;
 
     //@Column(name = "nome",nullable = false)
-    @NotNull
+    @NotBlank(message = "O campo NOME não pode ser nulo")
     private String nome;
 
-    @Column(name = "cpf",nullable = false)
-    @NotNull
+    //@Column(name = "cpf",nullable = false)
+    @NotBlank(message = "O campo CPF não pode ser nulo")
     private String cpf;
 
     LocalDate dob;
@@ -36,8 +36,8 @@ public class Paciente {
 
     private String altura;
 
-    @Column(name = "uf",nullable = false)
-    @NotNull
+    //@Column(name = "uf",nullable = false)
+    @NotBlank(message = "O campo UF não pode ser nulo")
     private String uf;
 
 }

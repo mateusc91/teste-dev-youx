@@ -1,5 +1,6 @@
 package com.example.testeyoux.repositorio;
 
+//import com.example.testeyoux.model.Medico;
 import com.example.testeyoux.model.Paciente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
