@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = PacienteRepositorio.class)
+
 public class TesteYouxApplication {
 
     public static void main(String[] args) {
